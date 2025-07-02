@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { motion } from "framer-motion";
 
 export const ProcessDetailsSection = (): JSX.Element => {
   // Define the phases data to map over
@@ -7,73 +8,55 @@ export const ProcessDetailsSection = (): JSX.Element => {
     {
       number: "01",
       description: "Understanding your business & bottlenecks",
-      left: "left-0",
-      top: "top-0",
     },
     {
       number: "02",
       description: "Creating actionable blueprint",
-      left: "left-[57px]",
-      top: "top-[81px]",
     },
     {
       number: "03",
       description: "Implementation",
-      left: "left-[151px]",
-      top: "top-[161px]",
     },
     {
       number: "04",
       description: "Launch & Expand",
-      left: "left-[281px]",
-      top: "top-[241px]",
     },
     {
       number: "05",
       description: "Continued partnership",
-      left: "left-[416px]",
-      top: "top-[321px]",
     },
   ];
 
   return (
-    <section className="relative w-full py-16 px-16">
+    <section className="relative w-full py-16">
       <div className="[font-family:'Inter',Helvetica] font-normal text-[#e4e4e4e4] text-sm tracking-[-0.31px] leading-[21px]">
         I walk you through phases
       </div>
 
-      <Card className="mt-[54px] ml-auto w-[1091px] h-[596px] rounded-3xl overflow-hidden border border-solid border-[#eeeeee52]">
-        <CardContent className="p-0 relative h-full">
-          <h2 className="absolute top-[34px] left-10 [font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-[32px] tracking-[-0.70px] leading-[48px]">
+      <Card className="mt-12 w-full rounded-3xl overflow-hidden border border-solid border-[#eeeeee52]">
+        <CardContent className="p-12 relative h-full">
+          <h2 className="[font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-4xl tracking-[-0.70px] leading-[48px]">
             PROCESS
           </h2>
 
-          <div className="absolute w-[916px] h-[353px] top-[168px] left-[111px]">
+          <div className="mt-16 flex flex-col gap-4">
             {phases.map((phase, index) => (
-              <div
+              <motion.div
                 key={`phase-${index}`}
-                className={`absolute ${phase.top} ${phase.left} w-[500px] h-8`}
+                className="flex items-center gap-8 p-4 rounded-lg"
+                whileHover={{
+                  backgroundColor: "rgba(238, 238, 238, 0.1)",
+                  transition: { duration: 0.3 },
+                }}
               >
-                <img
-                  className="absolute w-[500px] h-px top-[31px] left-0 object-cover"
-                  alt="Line"
-                  src="/line-45.svg"
-                />
-
-                <div className="absolute -top-px left-0 [font-family:'Inter',Helvetica] font-normal text-transparent text-base tracking-[-0.35px] leading-6 whitespace-nowrap">
-                  <span className="text-[#eeeeeeb2] tracking-[-0.06px]">
-                    Phase
-                  </span>
-                  <span className="text-[#eeeeee] tracking-[-0.06px]">
-                    {" "}
-                    {phase.number}
-                  </span>
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#eeeeee1c] text-white font-bold text-lg">
+                  {phase.number}
                 </div>
 
-                <div className="absolute -top-px left-[85px] [font-family:'Inter',Helvetica] font-normal text-[#eeeeee] text-base tracking-[-0.35px] leading-6 whitespace-nowrap">
+                <div className="[font-family:'Inter',Helvetica] font-normal text-[#eeeeee] text-2xl tracking-[-0.35px] leading-6 whitespace-nowrap">
                   {phase.description}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </CardContent>

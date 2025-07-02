@@ -9,11 +9,9 @@ export const AutomationShowcaseSection = (): JSX.Element => {
         <CardContent className="flex flex-col items-center justify-center">
           <Button
             variant="outline"
-            className="w-[442px] h-[116px] bg-[#eeeeee1c] rounded-3xl mb-6 flex items-center justify-center"
+            className="w-[442px] h-[116px] bg-[#eeeeee1c] rounded-full mb-6 flex items-center justify-center text-[#eeeeeeee] text-4xl tracking-[-0.70px] leading-[48px] font-normal [font-family:'Literata',Helvetica] transition-all duration-300 hover:bg-[#eeeeee24] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           >
-            <span className="[font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-[32px] tracking-[-0.70px] leading-[48px]">
-              Book a call
-            </span>
+            Book a call
           </Button>
 
           <p className="[font-family:'Inter',Helvetica] font-semibold text-[#9cd594] text-sm tracking-[-0.31px] leading-[21px]">

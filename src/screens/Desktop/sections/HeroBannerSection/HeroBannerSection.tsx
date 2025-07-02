@@ -9,38 +9,32 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 export const HeroBannerSection = (): JSX.Element => {
   return (
-    <Card className="relative w-full h-[560px] rounded-3xl border-[0.3px] border-solid border-[#eeeeee52] mx-4">
-      <CardContent className="p-0 h-full relative">
-        <div className="absolute w-[459px] h-[102px] top-[29px] left-[23px]">
-          <h2 className="absolute -top-px left-0 [font-family:'Literata',Helvetica] font-medium text-[#e4e4e4e4] text-[32px] tracking-[-0.70px] leading-[48px] whitespace-nowrap">
+    <Card className="relative w-full h-[560px] rounded-3xl border-[0.3px] border-solid border-[#eeeeee52]">
+      <CardContent className="p-8 h-full relative flex flex-col justify-between">
+        {/* Top-left content */}
+        <div>
+          <h2 className="[font-family:'Literata',Helvetica] font-medium text-[#e4e4e4e4] text-4xl tracking-[-0.70px] leading-[48px]">
             AI-Transformation Partner
           </h2>
-
-          <p className="absolute top-[59px] left-0 [font-family:'Inter',Helvetica] font-medium text-[#e4e4e4e4] text-sm tracking-[-0.31px] leading-[21px]">
-            I build custom AI - Infrastructures for businesses that transforms
-            them
+          <p className="mt-4 [font-family:'Inter',Helvetica] font-medium text-[#e4e4e4e4] text-base tracking-[-0.31px] leading-[21px]">
+            I build custom AI - Infrastructures for businesses that transforms them
             <br />
             in 90 days.
           </p>
         </div>
 
-        <div className="absolute w-[207px] h-[42px] top-[487px] left-[1083px]">
-          <p className="absolute -top-px left-0 [font-family:'Inter',Helvetica] font-medium text-[#e4e4e4b1] text-sm tracking-[-0.31px] leading-[21px]">
-            Become an AI-powered <br />
-            business
-          </p>
-        </div>
-
-        <div className="absolute w-[442px] h-[341px] top-[167px] left-[435px] flex flex-col items-center">
-          <div className="relative w-[111px] h-[136px]">
-            <p className="absolute -top-px left-[11px] [font-family:'Inter',Helvetica] font-medium text-white text-sm tracking-[-0.31px] leading-[21px] whitespace-nowrap">
+        {/* Center content */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+          <div className="relative w-32 h-40 mb-4">
+            <p className="absolute -top-8 left-1/2 -translate-x-1/2 [font-family:'Inter',Helvetica] font-medium text-white text-sm tracking-[-0.31px] leading-[21px] whitespace-nowrap">
               Hi, I&apos;m Naman
             </p>
-            <div className="absolute w-[117px] h-[109px] top-[30px] left-[-3px] bg-[#ffffff1c] rounded-xl overflow-hidden border-[3px] border-solid border-[#9cd594b1] flex items-center justify-center">
-              <Avatar className="w-[111px] h-[103px]">
+            <div className="w-32 h-40 bg-[#ffffff1c] rounded-2xl overflow-hidden border-4 border-solid border-[#9cd594b1] flex items-center justify-center">
+              <Avatar className="w-full h-full rounded-none">
                 <AvatarImage
                   src="/sm-profile-pic-cropped-2.png"
                   alt="Naman's profile"
+                  className="object-cover w-full h-full"
                 />
                 <AvatarFallback>NM</AvatarFallback>
               </Avatar>
@@ -49,9 +43,9 @@ export const HeroBannerSection = (): JSX.Element => {
 
           <Button
             variant="ghost"
-            className="mt-[168px] w-[442px] h-[116px] bg-[#eeeeee1c] rounded-3xl hover:bg-[#eeeeee30] transition-colors"
+            className="w-[442px] h-[116px] bg-[#eeeeee1c] rounded-full transition-all duration-300 hover:bg-[#eeeeee24] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           >
-            <span className="[font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-[32px] tracking-[-0.70px] leading-[48px] whitespace-nowrap">
+            <span className="[font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-4xl tracking-[-0.70px] leading-[48px] whitespace-nowrap">
               Book a call
             </span>
           </Button>
@@ -63,11 +57,13 @@ export const HeroBannerSection = (): JSX.Element => {
           </div>
         </div>
 
-        <img
-          className="absolute w-[57px] h-0.5 top-[508px] left-[692px]"
-          alt="Decorative line"
-          src="/vector-27.svg"
-        />
+        {/* Bottom-right content */}
+        <div className="self-end">
+          <p className="[font-family:'Inter',Helvetica] font-medium text-[#e4e4e4b1] text-sm tracking-[-0.31px] leading-[21px] text-right">
+            Become an AI-powered <br />
+            business
+          </p>
+        </div>
       </CardContent>
     </Card>
   );

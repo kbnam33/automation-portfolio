@@ -27,30 +27,28 @@ export const FAQSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full max-w-[1312px] mx-auto rounded-3xl overflow-hidden border border-solid border-[#e4e4e452] p-16">
-      <h2 className="mb-12 [font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-[32px] tracking-[-0.70px] leading-[48px]">
+    <section className="w-full rounded-3xl overflow-hidden border border-solid border-[#e4e4e452] p-16">
+      <h2 className="mb-12 [font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-4xl tracking-[-0.70px] leading-[48px]">
         Frequently Asked Questions
       </h2>
 
-      <div className="flex justify-end">
-        <div className="w-full max-w-[750px]">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border-b [border-bottom-style:solid] border-[#eeeeee36] py-[51px]"
-              >
-                <AccordionTrigger className="[font-family:'Inter',Helvetica] font-normal text-[#eeeeeeee] text-base tracking-[-0.35px] leading-6">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-[#eeeeeecc] [font-family:'Inter',Helvetica]">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+      <div className="w-full">
+        <Accordion type="single" collapsible className="w-full">
+          {faqItems.map((item, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-b-[1px] [border-bottom-style:solid] border-[#eeeeee36] py-8"
+            >
+              <AccordionTrigger className="[font-family:'Inter',Helvetica] font-normal text-[#eeeeeeee] text-xl tracking-[-0.35px] leading-6 text-left">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="pt-4 text-[#eeeeeecc] [font-family:'Inter',Helvetica] text-base">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
