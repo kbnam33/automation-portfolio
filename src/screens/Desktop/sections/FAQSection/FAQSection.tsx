@@ -20,30 +20,31 @@ export const FAQSection = (): JSX.Element => {
     },
     {
       question:
-        "How long does it takes to create a complete AI Infrastructure.",
+        "How long does it take to create a complete AI Infrastructure?",
       answer:
         "The timeline varies based on your requirements and existing systems. Typically, we can implement basic solutions within weeks, while more comprehensive AI infrastructure may take 2-3 months to fully deploy and optimize.",
     },
   ];
 
   return (
-    <section className="w-full rounded-3xl overflow-hidden border border-solid border-[#e4e4e452] p-16">
-      <h2 className="mb-12 [font-family:'Literata',Helvetica] font-normal text-[#eeeeeeee] text-4xl tracking-[-0.70px] leading-[48px]">
-        Frequently Asked Questions
-      </h2>
-
-      <div className="w-full">
+    <section className="w-full section-container flex flex-col md:flex-row gap-16">
+      <div className="w-full md:w-1/3">
+        <h2 className="[font-family:'Literata',Helvetica] font-normal text-4xl tracking-[-0.70px] leading-[48px] text-gradient-subtle">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <div className="w-full md:w-2/3">
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-b-[1px] [border-bottom-style:solid] border-[#eeeeee36] py-8"
+              className="border-b-[1px] [border-bottom-style:solid] border-white/10 py-6"
             >
-              <AccordionTrigger className="[font-family:'Inter',Helvetica] font-normal text-[#eeeeeeee] text-xl tracking-[-0.35px] leading-6 text-left">
+              <AccordionTrigger className="[font-family:'Inter',Helvetica] font-medium text-white/90 text-xl text-left hover:text-accent transition-colors duration-300">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="pt-4 text-[#eeeeeecc] [font-family:'Inter',Helvetica] text-base">
+              <AccordionContent className="pt-4 text-white/60 [font-family:'Inter',Helvetica] text-base leading-relaxed">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
