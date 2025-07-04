@@ -8,7 +8,7 @@ export const AutomationShowcaseSection = (): JSX.Element => {
         Ready to Automate Your Operations?
       </h2>
       {/* Paste your booking link in the href attribute of the <a> tag below */}
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="https://cal.com/namankumar/30min" target="_blank" rel="noopener noreferrer">
         <Button
           variant="ghost"
           className="button-glow w-[320px] sm:w-[442px] h-[100px] md:h-[116px] bg-white/5 rounded-full mb-6 flex items-center justify-center text-white text-3xl md:text-4xl tracking-[-0.70px] leading-[48px] font-normal [font-family:'Literata',Helvetica]"

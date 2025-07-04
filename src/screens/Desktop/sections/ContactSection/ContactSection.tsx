@@ -2,9 +2,9 @@ import React from "react";
 
 export const ContactSection = (): JSX.Element => {
   const socialLinks = [
-    { name: "Instagram", url: "#" },
-    { name: "LinkedIn", url: "#" },
-    { name: "X", url: "#" },
+    { name: "Instagram", url: "https://www.instagram.com/namankumar019?igsh=MTNzejIzc3ZxankwbA==" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/naman-kumar-43b426232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    // { name: "X", url: "#" },
   ];
 
   return (
@@ -44,6 +44,8 @@ export const ContactSection = (): JSX.Element => {
                 <a
                   key={index}
                   href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="[font-family:'PP_Neue_Montreal-Book',Helvetica] font-normal text-white text-base tracking-[0.14px] hover:text-accent transition-colors"
                 >
                   {link.name}
@@ -54,7 +56,8 @@ export const ContactSection = (): JSX.Element => {
         </div>
       </div>
       <div className="text-center mt-12 pt-8 border-t border-white/10 text-white/30 text-xs [font-family:'Inter',Helvetica]">
-        &copy; {new Date().getFullYear()} Naman. All rights reserved.
+        {/* &copy; {new Date().getFullYear()} Naman. All rights reserved. */}
+        &copy; Naman Kumar
       </div>
     </footer>
   );
