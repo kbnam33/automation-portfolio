@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { ArrowRight, Zap, Target, BarChart, Settings, Shield } from "lucide-react";
 
 export const CaseStudy = (): JSX.Element => {
@@ -28,15 +27,6 @@ export const CaseStudy = (): JSX.Element => {
     { number: "05", title: "Log", description: "The entire interaction is logged, updating or creating customer records." },
   ];
 
-  const pageAnimation = {
-    hidden: { opacity: 0, y: 15 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   return (
     <div className="bg-[#111111] text-white flex flex-row justify-center w-full">
       <div className="bg-[#111111] w-full max-w-[1440px] relative px-6 sm:px-8 md:px-16 py-6 md:py-12">
@@ -44,22 +34,20 @@ export const CaseStudy = (): JSX.Element => {
           <Link to="/" className="font-['Literata',Helvetica] font-normal text-white/70 text-2xl tracking-[-0.53px] leading-9 transition-colors hover:text-white">
             N
           </Link>
-          <Button
-            variant="outline"
-            className="h-[42px] md:h-[47px] w-auto px-5 md:px-6 rounded-full border-[1px] border-solid border-white/20 bg-transparent font-['Inter',Helvetica] font-medium text-white/80 text-[10px] md:text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
-          >
-            BOOK A CALL
-          </Button>
+          {/* Paste your booking link in the href attribute of the <a> tag below */}
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              className="h-[42px] md:h-[47px] w-auto px-5 md:px-6 rounded-full border-[1px] border-solid border-white/20 bg-transparent font-['Inter',Helvetica] font-medium text-white/80 text-[10px] md:text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
+            >
+              BOOK A CALL
+            </Button>
+          </a>
         </header>
 
-        <motion.main 
-          variants={pageAnimation} 
-          initial="hidden" 
-          animate="visible" 
-          className="flex flex-col gap-16 md:gap-24"
-        >
+        <main className="flex flex-col gap-16 md:gap-24">
           <section className="text-center py-16 md:py-24">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold [font-family:'Literata',Helvetica] mb-4 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold [font-family:'Literata',Helvetica] mb-4 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent" style={{ lineHeight: '1.4' }}>
               From Customer Chaos to 24/7 Clarity
             </h1>
             <p className="text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -74,7 +62,7 @@ export const CaseStudy = (): JSX.Element => {
           <section className="section-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-8 text-gradient-subtle">
+                <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-8 text-gradient-subtle" style={{ lineHeight: '1.4' }}>
                   The Challenge: Drowning in Repetitive Queries
                 </h2>
                 <p className="text-white/70 mb-8 leading-relaxed">
@@ -96,7 +84,7 @@ export const CaseStudy = (): JSX.Element => {
           
           <section className="section-container">
              <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-4 text-gradient-subtle">
+                <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-4 text-gradient-subtle" style={{ lineHeight: '1.4' }}>
                   The Solution: An Intelligent, End-to-End Automation
                 </h2>
                 <p className="text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -121,7 +109,7 @@ export const CaseStudy = (): JSX.Element => {
                         {step.number}
                         </span>
                         <div>
-                            <h3 className="[font-family:'Inter',Helvetica] font-medium text-white/90 text-2xl tracking-[-0.35px] leading-tight">
+                            <h3 className="[font-family:'Inter',Helvetica] font-medium text-white/90 text-2xl tracking-[-0.35px]" style={{ lineHeight: '1.4' }}>
                                 {step.title}
                             </h3>
                             <p className="text-white/60 mt-1 leading-relaxed">{step.description}</p>
@@ -135,7 +123,7 @@ export const CaseStudy = (): JSX.Element => {
 
           <section className="section-container">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-4 text-gradient-subtle">
+              <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-4 text-gradient-subtle" style={{ lineHeight: '1.4' }}>
                 Tangible Results
               </h2>
             </div>
@@ -143,7 +131,7 @@ export const CaseStudy = (): JSX.Element => {
               {results.map((result, index) => (
                  <div key={index} className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
                     <div className="mb-4">{result.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-2">{result.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2" style={{ lineHeight: '1.4' }}>{result.title}</h3>
                     <p className="text-white/70 leading-relaxed">{result.description}</p>
                  </div>
               ))}
@@ -152,42 +140,42 @@ export const CaseStudy = (): JSX.Element => {
           
           <section className="section-container">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-4 text-gradient-subtle">
+              <h2 className="text-3xl md:text-4xl font-bold [font-family:'Literata',Helvetica] mb-4 text-gradient-subtle" style={{ lineHeight: '1.4' }}>
                 Technical & Strategic Insights
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
                  <div className="mb-4"><Target size={24} className="text-accent"/></div>
-                 <h3 className="text-xl font-bold text-white mb-2">Why Typeform as a Trigger?</h3>
+                 <h3 className="text-xl font-bold text-white mb-2" style={{ lineHeight: '1.4' }}>Why Typeform as a Trigger?</h3>
                  <p className="text-white/70 leading-relaxed">
                     It provides a superior user experience and delivers clean, structured data, which is crucial for minimizing errors and simplifying downstream AI processing.
                  </p>
               </div>
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
                  <div className="mb-4"><Settings size={24} className="text-accent"/></div>
-                 <h3 className="text-xl font-bold text-white mb-2">Adaptable Ingestion</h3>
+                 <h3 className="text-xl font-bold text-white mb-2" style={{ lineHeight: '1.4' }}>Adaptable Ingestion</h3>
                  <p className="text-white/70 leading-relaxed">
                     The automation can be easily configured to trigger from other sources, including a dedicated email inbox, live website chat, or a direct API endpoint.
                  </p>
               </div>
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
                  <div className="mb-4"><Shield size={24} className="text-accent"/></div>
-                 <h3 className="text-xl font-bold text-white mb-2">Architecting for Data Integrity</h3>
+                 <h3 className="text-xl font-bold text-white mb-2" style={{ lineHeight: '1.4' }}>Architecting for Data Integrity</h3>
                  <p className="text-white/70 leading-relaxed">
                    A key technical solution was designing a resilient data flow that correctly handles both new and existing customers, ensuring every interaction is logged without data loss.
                  </p>
               </div>
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
                  <div className="mb-4"><ArrowRight size={24} className="text-accent"/></div>
-                 <h3 className="text-xl font-bold text-white mb-2">Future-Proofing</h3>
+                 <h3 className="text-xl font-bold text-white mb-2" style={{ lineHeight: '1.4' }}>Future-Proofing</h3>
                  <p className="text-white/70 leading-relaxed">
                     The system is a foundation that can be expanded with capabilities like sentiment analysis, CRM integration, and multi-language support.
                  </p>
               </div>
             </div>
           </section>
-        </motion.main>
+        </main>
       </div>
     </div>
   );

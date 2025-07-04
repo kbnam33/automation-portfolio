@@ -14,7 +14,6 @@ import { HeroBannerSection } from "./sections/HeroBannerSection";
 import { ProcessDetailsSection } from "./sections/ProcessDetailsSection";
 import { ProjectOverviewSection } from "./sections/ProjectOverviewSection";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export const Desktop = (): JSX.Element => {
   const navItems = [
@@ -22,15 +21,6 @@ export const Desktop = (): JSX.Element => {
     { label: "WORK", href: "#work" },
     { label: "PROCESS", href: "#process" },
   ];
-
-  const pageAnimation = {
-    hidden: { opacity: 0, y: 15 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
 
   return (
     <div className="bg-[#111111] flex flex-row justify-center w-full">
@@ -53,31 +43,33 @@ export const Desktop = (): JSX.Element => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button
-            variant="outline"
-            className="h-[42px] md:h-[47px] w-auto px-5 md:px-6 rounded-full border-[1px] border-solid border-white/20 bg-transparent font-['Inter',Helvetica] font-medium text-white/80 text-[10px] md:text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
-          >
-            BOOK A CALL
-          </Button>
+          {/* Paste your booking link in the href attribute of the <a> tag below */}
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              className="h-[42px] md:h-[47px] w-auto px-5 md:px-6 rounded-full border-[1px] border-solid border-white/20 bg-transparent font-['Inter',Helvetica] font-medium text-white/80 text-[10px] md:text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
+            >
+              BOOK A CALL
+            </Button>
+          </a>
         </header>
-        <motion.div variants={pageAnimation} initial="hidden" animate="visible">
-          <main className="flex flex-col gap-24 md:gap-32 my-12 md:my-16">
-            <div id="home">
-              <HeroBannerSection />
-            </div>
-            <ProjectOverviewSection />
-            <div id="work">
-              <CallToActionSection />
-            </div>
-            <div id="process">
-              <ProcessDetailsSection />
-            </div>
-            <FAQSection />
-            <AutomationShowcaseSection />
-          </main>
-          
-          <ContactSection />
-        </motion.div>
+
+        <main className="flex flex-col gap-24 md:gap-32 my-12 md:my-16">
+          <div id="home">
+            <HeroBannerSection />
+          </div>
+          <ProjectOverviewSection />
+          <div id="work">
+            <CallToActionSection />
+          </div>
+          <div id="process">
+            <ProcessDetailsSection />
+          </div>
+          <FAQSection />
+          <AutomationShowcaseSection />
+        </main>
+        
+        <ContactSection />
 
       </div>
     </div>
