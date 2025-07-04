@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 export const ProcessDetailsSection = (): JSX.Element => {
   const phases = [
@@ -11,24 +10,19 @@ export const ProcessDetailsSection = (): JSX.Element => {
 
   return (
     <section className="w-full">
-      <div className="text-center mb-16">
-        <h2 className="[font-family:'Literata',Helvetica] font-normal text-4xl tracking-[-0.70px] leading-[48px] text-gradient-subtle">
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="[font-family:'Literata',Helvetica] font-normal text-3xl md:text-4xl tracking-[-0.70px] leading-[48px] text-gradient-subtle">
           PROCESS
         </h2>
         <p className="[font-family:'Inter',Helvetica] font-normal text-white/60 text-sm tracking-[-0.31px] leading-[21px] mt-2">
           I walk you through phases
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {phases.map((phase, index) => (
-            <motion.div
+            <div
               key={index}
-              className="p-8 rounded-3xl flex flex-col items-center text-center section-container"
-              whileHover={{
-                backgroundColor: "hsl(var(--accent) / 0.05)",
-                borderColor: "hsl(var(--accent) / 0.1)",
-              }}
-              transition={{ duration: 0.3 }}
+              className="p-8 rounded-3xl flex flex-col items-center text-center section-container transition-colors duration-300 hover:bg-white/[.05]"
             >
               <span className="[font-family:'Literata',Helvetica] text-accent font-bold text-2xl mb-4">
                   {phase.number}
@@ -36,7 +30,7 @@ export const ProcessDetailsSection = (): JSX.Element => {
               <p className="[font-family:'Inter',Helvetica] font-medium text-white/90 text-xl leading-tight">
                   {phase.description}
               </p>
-            </motion.div>
+            </div>
           ))}
       </div>
     </section>

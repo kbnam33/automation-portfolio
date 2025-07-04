@@ -27,13 +27,13 @@ export const FAQSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full section-container flex flex-col md:flex-row gap-16">
-      <div className="w-full md:w-1/3">
-        <h2 className="[font-family:'Literata',Helvetica] font-normal text-4xl tracking-[-0.70px] leading-[48px] text-gradient-subtle">
+    <section className="w-full section-container flex flex-col lg:flex-row gap-8 lg:gap-16">
+      <div className="w-full lg:w-1/3">
+        <h2 className="[font-family:'Literata',Helvetica] font-normal text-3xl md:text-4xl tracking-[-0.70px] leading-tight lg:leading-[48px] text-gradient-subtle">
           Frequently Asked Questions
         </h2>
       </div>
-      <div className="w-full md:w-2/3">
+      <div className="w-full lg:w-2/3">
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
             <AccordionItem
@@ -41,7 +41,7 @@ export const FAQSection = (): JSX.Element => {
               value={`item-${index}`}
               className="border-b-[1px] [border-bottom-style:solid] border-white/10 py-6"
             >
-              <AccordionTrigger className="[font-family:'Inter',Helvetica] font-medium text-white/90 text-xl text-left hover:text-accent transition-colors duration-300">
+              <AccordionTrigger className="[font-family:'Inter',Helvetica] font-medium text-white/90 text-lg md:text-xl text-left hover:text-accent transition-colors duration-300">
                 {item.question}
               </AccordionTrigger>
               <AccordionContent className="pt-4 text-white/60 [font-family:'Inter',Helvetica] text-base leading-relaxed">
