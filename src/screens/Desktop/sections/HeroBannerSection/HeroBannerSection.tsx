@@ -17,7 +17,7 @@ export const HeroBannerSection = (): JSX.Element => {
           AI-Transformation<br />Partner
         </h2>
         <p className="mt-4 [font-family:'Inter',Helvetica] font-medium text-white/60 text-lg leading-relaxed max-w-md">
-          I build custom AI - Infrastructures for businesses that transforms them in 90 days.
+          Helping E-commerce businesses reduce customer churn and level up customer experience.
         </p>
       </div>
 
