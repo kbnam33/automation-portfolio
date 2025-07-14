@@ -17,7 +17,7 @@ export const HeroBannerSection = (): JSX.Element => {
           AI-Transformation<br />Partner
         </h2>
         <p className="mt-4 [font-family:'Inter',Helvetica] font-medium text-white/60 text-lg leading-relaxed max-w-md">
-          Helping E-commerce businesses reduce customer churn and level up customer experience.
+          Reduce customer churn and level up customer experience in 90 days.
         </p>
       </div>
 
