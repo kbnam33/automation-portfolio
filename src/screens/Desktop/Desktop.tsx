@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 
 export const Desktop = (): JSX.Element => {
   const navItems = [
-    { label: "HOME", href: "/" },
+    { label: "HOME", href: "#home" },
     { label: "WORK", href: "#work" },
     { label: "PROCESS", href: "#process" },
   ];
@@ -43,8 +43,8 @@ export const Desktop = (): JSX.Element => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          {/* Paste your booking link in the href attribute of the <a> tag below */}
-          <a href="https://cal.com/namankumar/30min" target="_blank" rel="noopener noreferrer">
+          {/* This link now scrolls to the booking section */}
+          <a href="#book-a-call">
             <Button
               variant="outline"
               className="h-[42px] md:h-[47px] w-auto px-5 md:px-6 rounded-full border-[1px] border-solid border-white/20 bg-transparent font-['Inter',Helvetica] font-medium text-white/80 text-[10px] md:text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-300 ease-in-out"
@@ -66,7 +66,10 @@ export const Desktop = (): JSX.Element => {
             <ProcessDetailsSection />
           </div>
           <FAQSection />
-          <AutomationShowcaseSection />
+          {/* The booking section now has an ID for scrolling */}
+          <div id="book-a-call">
+            <AutomationShowcaseSection />
+          </div>
         </main>
         
         <ContactSection />
