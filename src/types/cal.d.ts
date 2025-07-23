@@ -11,7 +11,11 @@ declare global {
       (action: 'init', options?: { origin?: string }): void;
       (action: 'inline', options: { elementOrSelector: string | HTMLElement; calLink: string; layout?: string }): void;
       (action: 'ui', options: Record<string, any>): void;
+      // Add the 'destroy' action to the type definition
+      (action: 'destroy'): void;
       q?: IArguments[];
+      // Add the destroy property for the optional chaining check in the cleanup function
+      destroy?: () => void;
     };
   }
 }

@@ -46,7 +46,14 @@ const ProjectItem = ({ project, isLast }: { project: Project; isLast: boolean })
 );
 
 export const CallToActionSection = (): JSX.Element => {
-  const projects = [
+  const projects: Project[] = [ // Add the Project[] type to the array
+    {
+      title: "AI Sales Coach",
+      description:
+        "An automated system that analyzes 100% of sales calls and pipes actionable intelligence directly into Slack, Email, and Google Sheets.",
+      date: "July, 2025",
+      link: "/case-study/ai-sales-coach",
+    },
     {
       title: "AI-Powered E-commerce Support Automation",
       description:

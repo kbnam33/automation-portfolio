@@ -11,18 +11,18 @@ export const FAQSection = (): JSX.Element => {
     {
       question: "How do these automations improve business operations?",
       answer:
-        "Our automations streamline workflows, reduce manual tasks, and increase operational efficiency. This leads to cost savings, improved accuracy, and allows your team to focus on higher-value activities.",
+        "My automations streamline workflows, reduce manual tasks, and increase operational efficiency. This leads to cost savings, improved accuracy, and allows your team to focus on higher-value activities.",
     },
     {
       question: "What happens on the call?",
       answer:
-        "During our call, we'll discuss your business needs, explore potential automation solutions, and outline how our services can address your specific challenges. It's an opportunity to ask questions and determine the best path forward.",
+        "During our call, we'll discuss your business needs, explore potential automation solutions, and I'll outline how my services can address your specific challenges. It's an opportunity to ask questions and determine the best path forward.",
     },
     {
       question:
         "How long does it take to create a complete AI Infrastructure?",
       answer:
-        "The timeline varies based on your requirements and existing systems. Typically, we can implement basic solutions within weeks, while more comprehensive AI infrastructure may take 2-3 months to fully deploy and optimize.",
+        "The timeline varies based on your requirements and existing systems. Typically, I can implement basic solutions within weeks, while more comprehensive AI infrastructure may take 2-3 months to fully deploy and optimize.",
     },
   ];
 

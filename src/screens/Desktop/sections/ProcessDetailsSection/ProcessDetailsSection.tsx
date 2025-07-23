@@ -5,22 +5,22 @@ export const ProcessDetailsSection = (): JSX.Element => {
     {
       number: "01",
       title: "Discovery & Understanding",
-      description: "We dive deep into your business, identifying bottlenecks and opportunities for AI-driven improvement."
+      description: "I dive deep into your business, identifying bottlenecks and opportunities for AI-driven improvement."
     },
     {
       number: "02",
       title: "Actionable Blueprint",
-      description: "We design a custom AI strategy and architecture, creating a clear roadmap for transformation."
+      description: "I design a custom AI strategy and architecture, creating a clear roadmap for transformation."
     },
     {
       number: "03",
       title: "Implementation",
-      description: "Our team builds and integrates the AI system, ensuring seamless integration with your existing workflows."
+      description: "I build and integrate the AI system, ensuring seamless integration with your existing workflows."
     },
     {
       number: "04",
       title: "Launch & Expansion",
-      description: "We deploy the solution and monitor its performance, identifying opportunities for further expansion and optimization."
+      description: "I deploy the solution and monitor its performance, identifying opportunities for further expansion and optimization."
     },
   ];
 
@@ -28,7 +28,7 @@ export const ProcessDetailsSection = (): JSX.Element => {
     <section className="w-full py-24">
       <div className="text-center mb-16">
         <h2 className="[font-family:'Literata',Helvetica] font-normal text-3xl md:text-4xl tracking-[-0.70px] leading-[48px] text-gradient-subtle">
-          Our Transformation Process
+          My Transformation Process
         </h2>
         <p className="[font-family:'Inter',Helvetica] font-normal text-white/60 text-lg mt-4">
           A clear, collaborative journey to AI-powered success.

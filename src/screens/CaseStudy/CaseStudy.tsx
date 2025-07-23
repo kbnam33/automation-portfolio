@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Target, BarChart, Settings, Shield } from "lucide-react";
+import { ArrowRight, Zap, Target, Settings, Shield, Users, Database, CheckCircle2 } from "lucide-react";
 
 export const CaseStudy = (): JSX.Element => {
   const challenges = [
@@ -13,10 +13,10 @@ export const CaseStudy = (): JSX.Element => {
   ];
 
   const results = [
-    { icon: <BarChart size={24} className="text-accent" />, title: "Instantaneous Engagement", description: "Every customer receives a relevant, helpful response within seconds." },
-    { icon: <BarChart size={24} className="text-accent" />, title: "Empowered Support Team", description: "Over 80% of initial query handling is automated, freeing up the human team." },
-    { icon: <BarChart size={24} className="text-accent" />, title: "Data-Driven Insights", description: "A centralized log provides a single source of truth for informed decisions." },
-    { icon: <BarChart size={24} className="text-accent" />, title: "Error-Free Operations", description: "The automation eliminates human error in forwarding and logging queries." },
+    { icon: <Zap size={24} className="text-accent" />, title: "Instantaneous Engagement", description: "Every customer receives a relevant, helpful response within seconds." },
+    { icon: <Users size={24} className="text-accent" />, title: "Empowered Support Team", description: "Over 80% of initial query handling is automated, freeing up the human team." },
+    { icon: <Database size={24} className="text-accent" />, title: "Data-Driven Insights", description: "A centralized log provides a single source of truth for informed decisions." },
+    { icon: <CheckCircle2 size={24} className="text-accent" />, title: "Error-Free Operations", description: "The automation eliminates human error in forwarding and logging queries." },
   ];
   
   const processSteps = [
@@ -34,7 +34,6 @@ export const CaseStudy = (): JSX.Element => {
           <Link to="/" className="font-['Literata',Helvetica] font-normal text-white/70 text-2xl tracking-[-0.53px] leading-9 transition-colors hover:text-white">
             N
           </Link>
-          {/* Paste your booking link in the href attribute of the <a> tag below */}
           <a href="https://cal.com/namankumar/30min" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
@@ -51,7 +50,7 @@ export const CaseStudy = (): JSX.Element => {
               From Customer Chaos to 24/7 Clarity
             </h1>
             <p className="text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-              This case study outlines how we built an intelligent, end-to-end
+              This case study outlines how I built an intelligent, end-to-end
               system that automatically categorizes customer queries, provides
               instant, personalized email responses, and maintains a
               persistent customer log—freeing up staff and boosting
@@ -88,7 +87,7 @@ export const CaseStudy = (): JSX.Element => {
                   The Solution: An Intelligent, End-to-End Automation
                 </h2>
                 <p className="text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-                  We designed and built a custom automation using N8N that acts
+                  I designed and built a custom automation using N8N that acts
                   as a smart, digital employee, orchestrating a complete response and
                   logging process without any human intervention.
                 </p>

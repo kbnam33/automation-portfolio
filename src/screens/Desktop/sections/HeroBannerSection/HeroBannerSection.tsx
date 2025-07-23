@@ -38,8 +38,7 @@ export const HeroBannerSection = (): JSX.Element => {
           </p>
         </div>
 
-        {/* This link now scrolls to the booking section */}
-        <a href="#book-a-call" className="w-full flex justify-center">
+        <a href="https://cal.com/namankumar/30min" target="_blank" rel="noopener noreferrer" className="w-full flex justify-center">
           <Button
             variant="ghost"
             className="button-glow w-full sm:max-w-md h-[100px] bg-white/5 rounded-full text-3xl [font-family:'Literata',Helvetica] font-normal text-white tracking-[-0.70px] leading-[48px]"
